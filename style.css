@@ -1,10 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    background: #222;
+    color: #dedede;
 }
 
 #container {
@@ -14,7 +14,7 @@
 #sub-container {
     width: 70%;
     margin: 20px auto;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 15px;
     padding: 15px;
 }
@@ -32,15 +32,15 @@ h2 {
 }
 
 .todays-date {
-    color: black;
+    color: #dedede;
     font-size: 18px;
     font-weight: bold;
 }
 
 .fetch-btn {
-    background-color: black;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 14px;
     border: none;
     border-radius: 15px;
     font-size: 15px;
@@ -53,21 +53,21 @@ h2 {
 }
 
 .fetch-btn:hover {
-    background-color: rgb(52, 36, 36);
+    background-color: #3b923d;
 }
 
 #dynamic-content-area {
-    border: 2px solid;
-    border-radius: 15px;
     width: 70%;
     min-height: 230px;
     margin: auto;
-    padding: 15px 20px;
     margin-bottom: 20px;
     visibility: hidden;
 }
 
 #content-area {
+    border: 1px solid;
+    padding: 15px 20px;
+    border-radius: 15px;
     transition: all 1s ease;
 }
 
@@ -86,8 +86,9 @@ h2 {
 #error-message-container {
     font-size: 20px;
     font-weight: bold;
-    color: black;
+    color: #dedede;
     letter-spacing: 1.2px;
+    margin-top: 100px;
 }
 
 svg {
@@ -98,7 +99,7 @@ svg {
 
 circle {
     fill: none;
-    stroke: #000;
+    stroke: #dedede;
     stroke-width: 2;
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
@@ -135,13 +136,14 @@ circle {
 }
 
 #post-by-line {
-    margin-top: 20px;
+    margin-top: 30px;
     font-style: italic;
 }
 
 #comments-enabler-div {
     margin-top: 20px;
     cursor: pointer;
+    color: #9C27B0;
 }
 
 #comments-enabler-div:hover {

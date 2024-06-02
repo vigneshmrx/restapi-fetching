@@ -11,6 +11,7 @@ setTodaysDate();
 
 let fetchBtn = document.getElementsByClassName("fetch-btn")[0];
 let dynamicContentArea = document.getElementById("dynamic-content-area");
+let mainContainer = document.getElementById("conatiner");
 
 const loader = '<div id="loader-container"><svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></div>';
 const errorMessage = '<div id="error-message-container">Some error occured. Please try again.</div>';
@@ -18,6 +19,11 @@ const errorMessage = '<div id="error-message-container">Some error occured. Plea
 const showDynamicContentArea = () => {
     dynamicContentArea.style.visibility = "visible";
     dynamicContentArea.innerHTML = loader;
+}
+
+const capitalizeString = (theStr) => {
+    const capitalizedStr = theStr.charAt(0).toUpperCase() + theStr.slice(1).toLowerCase();
+    return capitalizedStr;
 }
 
 function generateRandomNumber(max) {
@@ -72,7 +78,7 @@ fetchBtn.addEventListener("click", () => {
 
         let content = '<div id="content-area"><div id="post-heading">';
 
-        content += post.title + '</div><div id="post-content">' + post.body + '</div>';
+        content += capitalizeString(post.title) + '</div><div id="post-content">' + capitalizeString(post.body) + '</div>';
 
         let email = user.email;
         content += '<div id="post-by-line">Writer: ' + user.name + '<br>Email: <a href="mailto:' + email + '">' + email + '</a></div>';
